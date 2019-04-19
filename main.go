@@ -13,6 +13,7 @@ import (
 func main() {
 	cm := map[string]commands.Command{
 		"hello": commands.HelloCommand{},
+		"log":   commands.LogCommand{},
 	}
 
 	arguments := os.Args

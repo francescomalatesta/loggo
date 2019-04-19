@@ -10,7 +10,7 @@ import (
 func HandleInputCommandAndReturnResult(s string, cm map[string]commands.Command) (string, error) {
 	for _, command := range cm {
 		if command.Handles(s) {
-			result := command.GetResponse(s)
+			result := command.Execute(s)
 			return result, nil
 		}
 	}

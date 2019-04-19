@@ -1,6 +1,7 @@
 package commands
 
+// Command is the standard interface for recognizable commands
 type Command interface {
 	Handles(s string) bool
-	GetResponse(s string) string
+	Execute(s string) string
 }

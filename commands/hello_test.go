@@ -17,7 +17,7 @@ func TestItShouldHandleCommandWithRightTextCommand(t *testing.T) {
 func TestItShouldReturnHelloMessage(t *testing.T) {
 	c := HelloCommand{}
 
-	if c.GetResponse("HELLO") != "Hello to you." {
+	if c.Execute("HELLO") != "Hello to you." {
 		t.Errorf("Error: HelloCommand.GetResponse not returning the right message")
 	}
 }
